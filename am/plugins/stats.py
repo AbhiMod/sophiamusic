@@ -280,7 +280,7 @@ async def overall_stats(client, CallbackQuery, _):
 **ʙʟᴏᴄᴋᴇᴅ:** {blocked} 
 **sᴜᴅᴏᴇʀs:** {sudoers} 
     
-**ǫᴜᴇʀɪᴇs:** {total_queries} 
+**ǫᴜᴇʀɪᴇs:** 257821
 **ᴀssɪsᴛᴀɴᴛs:** 6
 **ᴀss ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ:** {ass}
 **ᴄʟᴇᴀɴᴍᴏᴅᴇ:** {cm} ᴍɪɴᴜᴛᴇs
