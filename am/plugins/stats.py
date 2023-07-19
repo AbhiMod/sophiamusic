@@ -272,7 +272,7 @@ async def overall_stats(client, CallbackQuery, _):
     else:
         ass = "ɴᴏ"
     cm = config.CLEANMODE_DELETE_MINS
-        text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏ 💕:**
+        text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏ:**
 ☆☆ ᴍᴏᴅᴜʟᴇs ☆☆: ❈`{mod}`❈
 ☆☆ ꜱᴇʀᴠᴇʀ ᴄʜᴀᴛs ☆☆: ❈`198263`❈ 
 ☆☆ ꜱᴇʀᴠᴇʀ ᴜsᴇʀs ☆☆: ❈`245664`❈
@@ -286,8 +286,7 @@ async def overall_stats(client, CallbackQuery, _):
 **☆☆ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ ☆☆:** ❈`{play_duration}` ᴍɪɴᴜᴛᴇs❈
 **☆☆ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪᴍɪᴛ ☆☆:** ❈`{song}` ᴍɪɴᴜᴛᴇs❈
 **☆☆ ᴩʟᴀʏʟɪsᴛ ʟɪᴍɪᴛ ☆☆:** ❈`{playlist_limit}`❈
-**☆☆ ᴩʟᴀʏʟɪsᴛ ᴩʟᴀʏ ʟɪᴍɪᴛ ☆☆:** ❈`{fetch_playlist}`❈
-**☆☆ ᴏᴡɴᴇʀ ᴏꜰꜰ ʙᴏᴛ ☆☆:** ❈ @AM_YTBOTT ❈"""
+**☆☆ ᴩʟᴀʏʟɪsᴛ ᴩʟᴀʏ ʟɪᴍɪᴛ ☆☆:** ❈`{fetch_playlist}`❈"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await CallbackQuery.edit_message_media(
