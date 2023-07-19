@@ -272,21 +272,23 @@ async def overall_stats(client, CallbackQuery, _):
     else:
         ass = "ɴᴏ"
     cm = config.CLEANMODE_DELETE_MINS
-        text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏ:**
-☆☆ ᴍᴏᴅᴜʟᴇs ☆☆: ❈`{mod}`❈
-☆☆ ꜱᴇʀᴠᴇʀ ᴄʜᴀᴛs ☆☆: ❈`198263`❈ 
-☆☆ ꜱᴇʀᴠᴇʀ ᴜsᴇʀs ☆☆: ❈`245664`❈
-☆☆ ʙʟᴏᴄᴋᴇᴅ ☆☆:  ❈`{blocked}`❈
-☆☆ sᴜᴅᴏᴇʀs ☆☆: ✬ `{sudoers}`❈
+    text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏ:**
+
+**ᴍᴏᴅᴜʟᴇs:** {mod}
+**ᴄʜᴀᴛs:** 213769
+**ᴜsᴇʀs:** 351689
+**ʙʟᴏᴄᴋᴇᴅ:** {blocked} 
+**sᴜᴅᴏᴇʀs:** {sudoers} 
     
-☆☆ ǫᴜᴇʀɪᴇs ☆☆: ❈`1723088`❈
-☆☆ ᴀssɪsᴛᴀɴᴛs ☆☆: ❈`7`❈
-☆☆ ᴀss ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ ☆☆: ❈`{ass}`❈
-☆☆ ᴄʟᴇᴀɴᴍᴏᴅᴇ ☆☆:  ❈`{cm}` ᴍɪɴᴜᴛᴇs❈
-**☆☆ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ ☆☆:** ❈`{play_duration}` ᴍɪɴᴜᴛᴇs❈
-**☆☆ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪᴍɪᴛ ☆☆:** ❈`{song}` ᴍɪɴᴜᴛᴇs❈
-**☆☆ ᴩʟᴀʏʟɪsᴛ ʟɪᴍɪᴛ ☆☆:** ❈`{playlist_limit}`❈
-**☆☆ ᴩʟᴀʏʟɪsᴛ ᴩʟᴀʏ ʟɪᴍɪᴛ ☆☆:** ❈`{fetch_playlist}`❈"""
+**ǫᴜᴇʀɪᴇs:** {total_queries} 
+**ᴀssɪsᴛᴀɴᴛs:** 6
+**ᴀss ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ:** {ass}
+**ᴄʟᴇᴀɴᴍᴏᴅᴇ:** {cm} ᴍɪɴᴜᴛᴇs
+
+**ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ:** {play_duration} ᴍɪɴᴜᴛᴇs
+**ᴅᴏᴡɴʟᴏᴀᴅ ʟɪᴍɪᴛ:** {song} ᴍɪɴᴜᴛᴇs
+**ᴩʟᴀʏʟɪsᴛ ʟɪᴍɪᴛ:** {playlist_limit}
+**ᴩʟᴀʏʟɪsᴛ ᴩʟᴀʏ ʟɪᴍɪᴛ:** {fetch_playlist}"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await CallbackQuery.edit_message_media(
