@@ -10,10 +10,10 @@ load_dotenv()
 API_ID = int(getenv("API_ID","12227067"))
 API_HASH = getenv("API_HASH","b463bedd791aa733ae2297e6520302fe")
 
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN","5998139371:AAElD8JFECw2gl1eaO19DmPfckRzOkVQgzE")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ambot:ambot@ambot.onafiyb.mongodb.net/?retryWrites=true&w=majority")
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID","-1001840241140"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Sophia Music")
 
 OWNER_ID = list(map(int, getenv("OWNER_ID", "6204761408").split()))
@@ -26,7 +26,7 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/AmBotYT")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/+WjWLfu-IHpg5MzQ1")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/AM_YTSUPPORT")
 
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
@@ -58,7 +58,7 @@ TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION", "BQCexWKj2vvHpdqaRBWVD2K170D7VOcHpXHvoOt4oI8dmb1kvHKdlfGx1ZOykowxe9vRGshojFoGLRSOtjUo7htbkUTrvbPrQ8SmBQ7bhMFYwY4IY_Bo0gxy9su6tRt2Csjn2D5J9_0D8HTasdrB66fyI-J708CV1_50MX4vL_Up4MoTSWBE2s0kKBa68a2EW0LQ7iHatRVIjyttMRCmDJVdJfMKwDykZgEZE5azdn4dzBWSNr6LSgOH3bRYuoVJA--FpQQ_nCyQk1bZ2C8LmA-S949gu_QrGA0bQqhiESpclNzZ7REA_A8A6KJPOY9e80EXiAj2Y6iueIuD6fraiGJbAAAAAXFsS70A")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
