@@ -74,7 +74,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             ),
             InlineKeyboardButton(
 
-                text="ᴊᴏɪɴ 💌", url=f"https://t.me/+Zurt4ENZhEYzNDRl"
+                text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ 💌", url=f"https://t.me/+Q26DZVw1dnk5NDA9"
              ),
           ],
         [
@@ -141,7 +141,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
             ),
             InlineKeyboardButton(
 
-                 text="ᴊᴏɪɴ 💌", url=f"https://t.me/+Zurt4ENZhEYzNDRl"
+                 text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ 💌", url=f"https://t.me/+Q26DZVw1dnk5NDA9"
              ),
           ],
         [
@@ -211,7 +211,7 @@ def telegram_markup(_, chat_id):
             ),
             InlineKeyboardButton(
 
-                 text="ᴊᴏɪɴ 💌", url=f"https://t.me/+Zurt4ENZhEYzNDRl"
+                 text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ 💌", url=f"https://t.me/+Q26DZVw1dnk5NDA9"
              ),
           ],
        [
@@ -378,7 +378,7 @@ def queue_markup(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
 
-                text="ᴊᴏɪɴ 💌", url=f"https://t.me/+Zurt4ENZhEYzNDRl"
+                text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ 💌", url=f"https://t.me/+Q26DZVw1dnk5NDA9"
              ),
           ],
         [
