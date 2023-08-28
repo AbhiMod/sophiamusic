@@ -9,8 +9,7 @@ from am import app
 from am.core.call import Anon
 from am.misc import db
 from am.utils.database import get_authuser_names, get_cmode
-from am.utils.decorators import (ActualAdminCB, AdminActual,
-                                         language)
+from am.utils.decorators import ActualAdminCB, AdminActual, language
 from am.utils.formatters import alpha_to_int
 
 ### Multi-Lang Commands
@@ -28,9 +27,7 @@ RESTART_COMMAND = get_command("RESTART_COMMAND")
 async def reload_admin_cache(client, message: Message, _):
     try:
         chat_id = message.chat.id
-        admins = await app.get_chat_members(
-            chat_id, filter="administrators"
-        )
+        admins = await app.get_chat_members(chat_id, filter="administrators")
         authusers = await get_authuser_names(chat_id)
         adminlist[chat_id] = []
         for user in admins:
@@ -40,10 +37,11 @@ async def reload_admin_cache(client, message: Message, _):
             user_id = await alpha_to_int(user)
             adminlist[chat_id].append(user_id)
         await message.reply_text(_["admin_20"])
-    except:
+    except Exception as e:
         await message.reply_text(
-            "ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇғʀᴇsʜ ᴀᴅᴍɪɴs ʟɪsᴛ, ᴍᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ."
+            "Failed to refresh admins list, make sure you promoted the bot."
         )
+        print(e)
 
 
 @app.on_message(
@@ -55,27 +53,27 @@ async def reload_admin_cache(client, message: Message, _):
 @AdminActual
 async def restartbot(client, message: Message, _):
     mystic = await message.reply_text(
-        f"ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ ʀᴇʙᴏᴏᴛɪɴɢ {MUSIC_BOT_NAME} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ."
+        f"Please wait, rebooting {MUSIC_BOT_NAME} for your chat."
     )
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
         await Anon.stop_stream(message.chat.id)
-    except:
-        pass
+    except Exception as e:
+        print(e)
     chat_id = await get_cmode(message.chat.id)
     if chat_id:
         try:
             await app.get_chat(chat_id)
-        except:
-            pass
+        except Exception as e:
+            print(e)
         try:
             db[chat_id] = []
             await Anon.stop_stream(chat_id)
-        except:
-            pass
+        except Exception as e:
+            print(e)
     return await mystic.edit_text(
-        f"sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇʙᴏᴏᴛᴇᴅ {MUSIC_BOT_NAME} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ, ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ sᴛᴀʀᴛ ᴩʟᴀʏɪɴɢ ᴀɢᴀɪɴ..."
+        f"Successfully rebooted {MUSIC_BOT_NAME} for your chat, you can start playing again..."
     )
 
 
@@ -84,23 +82,11 @@ async def close_menu(_, CallbackQuery):
     try:
         await CallbackQuery.message.delete()
         await CallbackQuery.answer()
-      await CallbackQuery.message.reply_text(
-            f"𝓒𝓵𝓸𝓼𝓮𝓭 𝓑𝔂: {CallbackQuery.from_user.mention}"
+        await CallbackQuery.message.reply_text(
+            f"Closed By: {CallbackQuery.from_user.mention}"
         )
-    except:
-        return
-
-
-@app.on_callback_query(filters.regex("close") & ~BANNED_USERS)
-async def close_menu(_, CallbackQuery):
-    try:
-        await CallbackQuery.message.delete()
-        await CallbackQuery.answer()
-      await CallbackQuery.message.reply_text(
-            f"𝓒𝓵𝓸𝓼𝓮𝓭 𝓑𝔂: {CallbackQuery.from_user.mention}"
-        )
-    except:
-        return
+    except Exception as e:
+        print(e)
 
 
 @app.on_callback_query(
@@ -112,11 +98,11 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
     task = lyrical.get(message_id)
     if not task:
         return await CallbackQuery.answer(
-            "ᴅᴏᴡɴʟᴏᴀᴅ ᴀʟʀᴇᴀᴅʏ ᴄᴏᴍᴩʟᴇᴛᴇᴅ.", show_alert=True
+            "Download already completed.", show_alert=True
         )
     if task.done() or task.cancelled():
         return await CallbackQuery.answer(
-            "ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴀʟʀᴇᴀᴅʏ ᴄᴏᴍᴩʟᴇᴛᴇᴅ ᴏʀ ᴄᴀɴᴄᴇʟʟᴇᴅ.",
+            "Downloading already completed or cancelled.",
             show_alert=True,
         )
     if not task.done():
@@ -127,15 +113,16 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
             except:
                 pass
             await CallbackQuery.answer(
-                "ᴅᴏᴡɴʟᴏᴀᴅɪɢ ᴄᴀɴᴄᴇʟʟᴇᴅ.", show_alert=True
+                "Downloading cancelled.", show_alert=True
             )
             return await CallbackQuery.edit_message_text(
-                f"ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴩʀᴏᴄᴇss ᴄᴀɴᴄᴇʟʟᴇᴅ ʙʏ {CallbackQuery.from_user.mention}"
+                f"Downloading process cancelled by {CallbackQuery.from_user.mention}"
             )
-        except:
+        except Exception as e:
+            print(e)
             return await CallbackQuery.answer(
-                "ғᴀɪʟᴇᴅ ᴛᴏ ᴄᴀɴᴄᴇʟ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...", show_alert=True
+                "Failed to cancel downloading...", show_alert=True
             )
     await CallbackQuery.answer(
-        "ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴄᴏɢɴɪᴢᴇ ᴛʜᴇ ᴏɴɢᴏɪɴɢ ᴛᴀsᴋ.", show_alert=True
+        "Failed to recognize the ongoing task.", show_alert=True
     )
