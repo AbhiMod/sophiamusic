@@ -74,7 +74,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             ),
             InlineKeyboardButton(
 
-                text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ 💌", url=f"https://t.me/+jLfuucjsi8kzMzE1"
+                text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/+eSTzpugepEMwNDBl"
              ),
           ],
         [
@@ -141,7 +141,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
             ),
             InlineKeyboardButton(
 
-                 text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ 💌", url=f"https://t.me/+jLfuucjsi8kzMzE1"
+                 text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/+eSTzpugepEMwNDBl"
              ),
           ],
         [
@@ -211,7 +211,7 @@ def telegram_markup(_, chat_id):
             ),
             InlineKeyboardButton(
 
-                 text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ 💌", url=f"https://t.me/+jLfuucjsi8kzMzE1"
+                 text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/+eSTzpugepEMwNDBl"
              ),
           ],
        [
@@ -378,7 +378,7 @@ def queue_markup(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
 
-                text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ 💌", url=f"https://t.me/+jLfuucjsi8kzMzE1"
+                text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/+eSTzpugepEMwNDBl"
              ),
           ],
         [
