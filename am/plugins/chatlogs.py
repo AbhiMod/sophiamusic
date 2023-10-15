@@ -30,10 +30,11 @@ async def join_watcher(_, message):
                 f"**🔐𝐂ʜᴀᴛ 𝐔sᴇʀɴᴀᴍᴇ:** @{username}\n"
                 f"**📈𝐆ʀᴏᴜᴘ 𝐌ᴇᴍʙᴇʀs:** {count}\n"
                 f"**🤔𝐀ᴅᴅᴇᴅ 𝐁ʏ:** {message.from_user.mention}\n"
-                f"**💕𝐁ᴏᴛ 𝐁ʏ:** @AM_YTBOTT\n"
+                f"**💕𝓟ᴀʀᴛʏ:** @AM_YTBOTT\n" 
+                f"**🥳𝓟ᴀʀᴛʏ 𝓟ʀᴏ𝓜ᴀx:** @Mr_majnu72\n"
             )
             await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"😍ᴀᴅᴅ ᴍᴇ ɪɴ ᴍᴏʀᴇ😍", url=f"https://t.me/{app.username}?startgroup=true")]
+            [InlineKeyboardButton(f"➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"https://t.me/{app.username}?startgroup=true")]
          ]))
 
 
@@ -45,5 +46,5 @@ async def on_left_chat_member(_, message: Message):
         title = message.chat.title
         username = f"@{message.chat.username}" if message.chat.username else "𝐏ʀɪᴠᴀᴛᴇ 𝐂ʜᴀᴛ"
         chat_id = message.chat.id
-        left = f"**✫** <b><u>#𝐋ᴇғᴛ_𝐆ʀᴏᴜᴘ</u></b> **✫**\n\n**𝐂ʜᴀᴛ 𝐓ɪᴛʟᴇ :** {title}\n\n**𝐂ʜᴀᴛ 𝐈ᴅ :** {chat_id}\n\n**𝐑ᴇᴍᴏᴠᴇᴅ 𝐁ʏ :** {remove_by}\n\n**𝐁ᴏᴛ : @{app.username}\n\n💕𝐁ᴏᴛ 𝐁ʏ:** @AM_YTBOTT"
+        left = f"**✫** <b><u>#𝐋ᴇғᴛ_𝐆ʀᴏᴜᴘ</u></b> **✫**\n\n**𝐂ʜᴀᴛ 𝐓ɪᴛʟᴇ :** {title}\n\n**𝐂ʜᴀᴛ 𝐈ᴅ :** {chat_id}\n\n**𝐑ᴇᴍᴏᴠᴇᴅ 𝐁ʏ :** {remove_by}\n\n**𝐁ᴏᴛ : @{app.username}\n\n💕𝓟ᴀʀᴛʏ: @AM_YTBOTT\n\n🥳𝓟ᴀʀᴛʏ 𝓟ʀᴏ𝓜ᴀx: @Mr_majnu72\n"
         await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=left)
