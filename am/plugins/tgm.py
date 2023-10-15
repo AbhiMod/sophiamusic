@@ -1,6 +1,6 @@
 from telegraph import upload_file
 from pyrogram import filters
-from AnonX import app
+from am import app
 
 
 @app.on_message(filters.command('tgm'))
