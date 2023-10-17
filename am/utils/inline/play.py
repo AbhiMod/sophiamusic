@@ -68,15 +68,6 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
-         [
-            InlineKeyboardButton(
-                text=" ᴏᴡɴᴇʀ 💞", url=f"https://t.me/AM_YTBOTT"
-            ),
-            InlineKeyboardButton(
-
-                text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/+eSTzpugepEMwNDBl"
-             ),
-          ],
         [
          
             InlineKeyboardButton(
@@ -135,15 +126,6 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
-         [
-            InlineKeyboardButton(
-                text=" ᴏᴡɴᴇʀ 💞", url=f"https://t.me/AM_YTBOTT"
-            ),
-            InlineKeyboardButton(
-
-                 text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/+eSTzpugepEMwNDBl"
-             ),
-          ],
         [
           
             InlineKeyboardButton(
@@ -204,16 +186,6 @@ def telegram_markup(_, chat_id):
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
-       
-         [
-            InlineKeyboardButton(
-                text=" ᴏᴡɴᴇʀ 💞", url=f"https://t.me/AM_YTBOTT"
-            ),
-            InlineKeyboardButton(
-
-                 text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/+eSTzpugepEMwNDBl"
-             ),
-          ],
        [
          
             InlineKeyboardButton(
@@ -371,16 +343,6 @@ def queue_markup(_, videoid, chat_id):
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
-       
-         [
-            InlineKeyboardButton(
-                text=" ᴏᴡɴᴇʀ 💞", url=f"https://t.me/AM_YTBOTT"
-            ),
-            InlineKeyboardButton(
-
-                text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/+eSTzpugepEMwNDBl"
-             ),
-          ],
         [
           
             InlineKeyboardButton(
