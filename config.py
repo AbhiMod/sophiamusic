@@ -15,7 +15,7 @@ BOT_TOKEN = getenv("BOT_TOKEN","")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ambot:ambot@ambot.onafiyb.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID","-1001840241140"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Sophia Music")
-
+DEEP_API = getenv("DEEP_API", "b4b51042-03d5-4ac1-b75b-583dac0549bf")
 OWNER_ID = list(map(int, getenv("OWNER_ID", "6204761408").split()))
 
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
