@@ -3,8 +3,8 @@ from lexica import Client as ApiClient, AsyncClient
 from pyrogram.types import InlineKeyboardButton
 from math import ceil
 import asyncio
-from am import AMAI
-
+from am import app
+from config import DEEP_API
 
 
 api = ApiClient()
@@ -131,7 +131,7 @@ def paginate_models(page_n: int, models: list,user_id) -> list:
 
 
 
-@AMAI.on_message(filters.command(["draw","create","imagine","dream","am","bot","photo"]))
+@app.on_message(filters.command(["draw","create","imagine","dream","am","bot","photo"]))
 async def draw(_: AMAI, m: t.Message):
     global Database
     prompt = getText(m)
@@ -146,7 +146,7 @@ async def draw(_: AMAI, m: t.Message):
             reply_markup=t.InlineKeyboardMarkup(btns)
             )
 
-@AMAI.on_callback_query(filters.regex(pattern=r"^d.(.*)"))
+@app.on_callback_query(filters.regex(pattern=r"^d.(.*)"))
 async def selectModel(_:AMAI,query:t.CallbackQuery):
     global Database
     data = query.data.split('.')
