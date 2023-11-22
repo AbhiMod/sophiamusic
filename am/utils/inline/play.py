@@ -69,6 +69,22 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             ),
         ],
         [
+            InlineKeyboardButton(
+
+                text="ᴊᴏɪɴ ᴜꜱ 💌",
+
+                url=f"https://t.me/+ipTGU1mbiw8xODk1",
+
+            ),
+            InlineKeyboardButton(
+
+                text="💕 ᴏᴡɴᴇʀ",
+
+                url=f"https://t.me/sam_loveall",
+
+            ),
+        ],
+        [
          
             InlineKeyboardButton(
                 text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
@@ -127,6 +143,22 @@ def telegram_markup_timer(_, chat_id, played, dur):
             ),
         ],
         [
+            InlineKeyboardButton(
+
+                text="ᴊᴏɪɴ ᴜꜱ 💌",
+
+                url=f"https://t.me/+ipTGU1mbiw8xODk1",
+
+            ),
+            InlineKeyboardButton(
+
+                text="💕 ᴏᴡɴᴇʀ",
+
+                url=f"https://t.me/sam_loveall",
+
+            ),
+        ],
+        [
           
             InlineKeyboardButton(
                 text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
@@ -157,7 +189,22 @@ def stream_markup(_, videoid, chat_id):
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
-       
+       [
+            InlineKeyboardButton(
+
+                text="ᴊᴏɪɴ ᴜꜱ 💌",
+
+                url=f"https://t.me/+ipTGU1mbiw8xODk1",
+
+            ),
+            InlineKeyboardButton(
+
+                text="💕 ᴏᴡɴᴇʀ",
+
+                url=f"https://t.me/sam_loveall",
+
+            ),
+        ],
         [
           
             InlineKeyboardButton(
@@ -184,6 +231,22 @@ def telegram_markup(_, chat_id):
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+
+                text="ᴊᴏɪɴ ᴜꜱ 💌",
+
+                url=f"https://t.me/+ipTGU1mbiw8xODk1",
+
+            ),
+            InlineKeyboardButton(
+
+                text="💕 ᴏᴡɴᴇʀ",
+
+                url=f"https://t.me/sam_loveall",
+
             ),
         ],
        [
@@ -341,6 +404,22 @@ def queue_markup(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+
+                text="ᴊᴏɪɴ ᴜꜱ 💌",
+
+                url=f"https://t.me/+ipTGU1mbiw8xODk1",
+
+            ),
+            InlineKeyboardButton(
+
+                text="💕 ᴏᴡɴᴇʀ",
+
+                url=f"https://t.me/sam_loveall",
+
             ),
         ],
         [
